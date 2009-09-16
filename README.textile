@@ -1,0 +1,13 @@
+This script compares dependencies between local and remote environments based on the gems a Rails project uses.
+
+!http://dl.getdropbox.com/u/221414/github/depwhack.png!
+
+h3. Usage
+
+Change directory to your Rails project and run:
+
+<code>depwhack server</code>
+
+h3. Installation
+
+<code>gem install alexyoung-depwhack</code>
