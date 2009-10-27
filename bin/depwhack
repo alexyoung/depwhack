@@ -16,7 +16,11 @@ def green(text); colorize(text, "#{27.chr}[32m"); end
 begin
   gems = eval `#{remote_command} "#{gem_list_code}"`
 rescue
-  puts "[#{red 'ERROR'}] Please run this command from a Rails project's path."
+  puts "Change directory to a Rails project and specify a server:"
+  puts
+  puts "For example:"
+  puts "\tcd ~/Documents/Code/rails_project"
+  puts "\tdepwhack myserver"
   exit 1
 end
 
