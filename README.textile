@@ -10,4 +10,6 @@ Change directory to your Rails project and run:
 
 h3. Installation
 
-<code>gem install alexyoung-depwhack</code>
+This gem is hosted on "gemcutter":http://gemcutter.org
+
+<code>gem install depwhack</code>

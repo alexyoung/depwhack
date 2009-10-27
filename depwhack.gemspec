@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.bindir = 'bin'
   s.executables = ['depwhack']
-  s.default_executable = 'bin/depwhack'
+  s.default_executable = 'depwhack'
   s.homepage = %q{http://github.com/alexyoung/depwhack}
   s.summary = %q{depwhack is a tool for comparing local and remote Rails project dependencies.}
 end
