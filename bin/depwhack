@@ -13,13 +13,18 @@ end
 def red(text); colorize(text, "#{27.chr}[31m"); end
 def green(text); colorize(text, "#{27.chr}[32m"); end
 
+begin
+  gems = eval `#{remote_command} "#{gem_list_code}"`
+rescue
+  puts "[#{red 'ERROR'}] Please run this command from a Rails project's path."
+  exit 1
+end
+
 gem_list_code =<<RUBY
 at_exit do
   p Gem.loaded_specs.collect { |g| [g.first, g[1].version.to_s] }
 end
 RUBY
-
-gems = eval `#{remote_command} "#{gem_list_code}"`
 
 gems.each do |name, version|
   output = %x{#{ssh_bin} #{server} '#{gem_bin} search #{name}'}

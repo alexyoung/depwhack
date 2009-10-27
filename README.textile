@@ -8,6 +8,8 @@ Change directory to your Rails project and run:
 
 <code>depwhack server</code>
 
+This works best with ssh keys set up, else it'll prompt you a lot.
+
 h3. Installation
 
 This gem is hosted on "gemcutter":http://gemcutter.org
